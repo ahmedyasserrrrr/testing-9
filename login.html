@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html dir="rtl" >
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/all.min.css">
+  <title>نموذج رائع</title>
+  <style>
+    /* أسلوب التصميم */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] ,
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: orange;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+<div class="row">
+  <div class="col-md-12 ">
+
+    <div class="form-container">
+    
+
+      <form method="POST" action="{{ route('login') }}">
+    
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني:</label>
+          <input id="email" type="email" class="form-control  "  placeholder="ادخل بريدك الالكتروني" required autocomplete="email" autofocus>
+
+      
+  
+      </div>
+        <div class="form-group">
+          <label for="name">كلمه المرور:</label>
+              <input id="password" type="password" class="form-control  " placeholder="ادخل كلمه المرور" name="password" required autocomplete="current-password">
+
+              
+                              
+        </div>
+     
+          
+    
+        <div class="form-group ">
+          <input type="submit" value="دخول">
+          <a type="submit"   href="registair.html" value="">ليس لدي حساب</a>
+          <a class="btn btn-link" href="">
+             هل نسيت كلمه المرور.؟
+          </a>
+    
+        </div>
+      </form>
+</div>
+
+  </div>
+</div>  
+
+</body>
+</html>

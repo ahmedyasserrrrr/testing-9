@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.rtl.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body class="bg-white  ">
+        <nav class="navbar navbar-expand-md navbar-light bg-warning shadow-sm  text-center">
+            <div class="container-fluid">
+              <h3 class="navbar-brand  ms-3 text-white " href="index.html">مزاين</h3>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-white -toggle" href="indexx.html" id="" role=""  data-bs-toggle="" aria-expanded="">
+                        القسم الاول
+                      </a>                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white -toggle" href="indexx.html" id="" role="" data-bs-toggle="" aria-expanded="">
+                        القسم الثاني
+                      </a>                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white -toggle" href="indexx.html" id="" role="" data-bs-toggle="" aria-expanded="">
+                        القسم الثالث
+                      </a>                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white -toggle" href="login.html"  role="" data-bs-toggle="" aria-expanded="">
+                        تسجيل الدخول
+                      </a>                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white -toggle" href="registair.html"  role="" data-bs-toggle="" aria-expanded="">
+                         انشاء حساب
+                      </a>                  </li>
+                </ul>
+                <span class="navbar-text">
+                </span>
+              </div>
+            </div>
+          </nav>
+       
+                  
+                   
+
+                           
+
+            
+
+                <!-- Right Side Of Navbar -->
+              
+            </div>
+        </div>
+    </nav>
+    
+        <div class="container">
+          <form class="post-form"  action="{{ route('comment.store') }}"  method="POST"  enctype="multipart/form-data" >
+              <div class="user-info">
+                  <img src="تنزيل.png"    alt="صورة المستخدم">
+                  <h6 type="text" placeholder="اسم المستخدم">  User </h6>
+              </div>
+              <textarea placeholder="اكتب شيئًا هنا..."  name="textarea"   ></textarea>
+              <input type="file" name="image" accept="image/*">
+              <input type="submit" class="btn btn-lg btn-warning" value="نشر">
+          </form>
+      </div>
+     
+      <div class="container">
+      <div class="row m-1 ">
+          <div class="col-md-12 m-1">
+            <div class="post  mt-3">
+              <div class="header">
+                <img class="profile-picture" class="" src="تنزيل.png" alt="Profile Picture">
+                <div class="post-info">
+                  <h3 class="username">User </h3>
+                  <p class="post-time">منذ ١ ساعة   </p>
+                </div>
+              </div>
+              <p class="post-content"></p>
+              <p>محتوى البوست هنا...</p>
+              <img class="post-image" src="IMG_2068.JPG" alt="Post Image">
+              <small  id="h2" class="d-inline" >0</small>
+               <i class="fa-sharp fa-solid fa-heart" id="icon" onclick="like()"  ></i>
+                إعجاب
+             
+                <div class="comments">         
+                    <div class="comment">
+                        <img class="comment-profile-picture   " src="تنزيل.png" alt="Comment Profile Picture">
+                        <div class="comment-info">
+                        <h6 class="username">  User  </h4>
+                        <p class="comment-text"  >  nice </p>
+                      </div>
+                    </div>
+                  </div>
+  
+            
+              <div class="add-comment">                 
+                    <div class="d-flex add-comment  ">
+                      <img class="profile-picture" class="mb-3"  src="IMG_2068.JPG" alt="Profile Picture">
+                      <input type="text"  class="m-1  " name="title" placeholder="أضف تعليقًا...">
+                      <input type="submit" class="btn btn- btn-warning" value="نشر">
+                    </div>
+              </div>
+            </div>
+  
+          </div>
+          <br>
+     
+  
+      </div>
+       
+        </div>
+  </div>
+  </div>
+
+  <script src="js/js.js"></script>
+</body>
+</html>
+<style>
+    #icon.active{
+      color:red;
+    }
+  </style>
+    <script>
+      let h2element=document.getElementById('h2');
+      let icon=document.getElementById('icon');
+      let count=0;
+
+      function like() {
+        if (icon.classList.toggle("active")) {
+          count=1
+        }else{
+          count=0
+        }
+          
+        h2element.innerText=count;
+      }
+
+    </script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .containerr {
+        width: 500px;
+        margin: 20px auto;
+        /* background-color: rgba(255, 255, 255, 0.9); */
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .post-form {
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .post-form .user-info {
+        display: flex;
+        align-items: center;
+    }
+    
+    .post-form .user-info img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    .post-form textarea,
+    .post-form input[type="file"],
+    .post-form input[type="text"] {
+        width: 100%;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #333;
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    
+    .post-form input[type="submit"] {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    .post-form input[type="submit"]:hover {
+        background-color: orange;
+    }
+  </style>
